@@ -162,10 +162,11 @@
 		
 		this.dots = function() {
 			//  Create the HTML
-			var humanIndex = index + 1;
-			
 			var html = '<ol class="dots">';
-				$.each(this.items, function(index) { html += '<li class="dot' + (index < 1 ? ' active' : '') + '">' + humanIndex + '</li>'; });
+				$.each(this.items, function(index) { 
+					var humanIndex = index + 1;
+					html += '<li class="dot' + (index < 1 ? ' active' : '') + '">' + humanIndex + '</li>'; 
+				});
 				html += '</ol>';
 			
 			//  Add it to the Unslider
